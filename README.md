@@ -98,4 +98,4 @@ You will get a list of packages like:
 "@wordpress/server-side-render": "~5.22.0",
 ```
 
-Replace `~` with
+Replace `~` with `^`, and paste in `package.json`.
