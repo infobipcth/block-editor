@@ -14,8 +14,7 @@
         "allowJs": true,
         "jsx": "react",
         "jsxFactory": "createElement",
-        "skipLibCheck": true,
-        "typeRoots": [ "./node_modules/@types" ]
+        "skipLibCheck": true
     },
     "include": [
         "./src/**/*"
