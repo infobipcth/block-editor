@@ -29,6 +29,7 @@
     "prepare": "npm run build"
   },
   "dependencies": {
+    "@types/node": "^22.14.1",
     "@wordpress/api-fetch": "^7.22.0",
     "@wordpress/base-styles": "^5.22.0",
     "@wordpress/block-editor": "^14.17.0",
