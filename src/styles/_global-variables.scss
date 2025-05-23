@@ -1,0 +1,160 @@
+// Breakpoints
+$break-xhuge: 1920px;
+$break-huge: 1440px;
+$break-wide: 1280px;
+$break-xlarge: 1080px;
+$break-large: 960px;   // admin sidebar auto folds
+$break-medium: 782px;  // adminbar goes big
+$break-small: 600px;
+$break-mobile: 480px;
+$break-zoomed-in: 280px;
+
+// Grayscale & Colors
+$black: #000;         // Use only when you truly need pure black. For UI, use $gray-900.
+$gray-900: #1e1e1e;
+$gray-800: #2f2f2f;
+$gray-700: #757575;   // Meets 4.6:1 (4.5:1 is minimum) text contrast against white.
+$gray-600: #949494;   // Meets 3:1 UI or large text contrast against white.
+$gray-400: #ccc;
+$gray-300: #ddd;      // Used for most borders.
+$gray-200: #e0e0e0;   // Used sparingly for light borders.
+$gray-100: #f0f0f0;   // Used for light gray backgrounds.
+$white: #fff; // <-- This fixes the $white in WP components
+
+// Placeholder opacities & alert colors
+$dark-gray-placeholder: rgba($gray-900, 0.62);
+$medium-gray-placeholder: rgba($gray-900, 0.55);
+$light-gray-placeholder: rgba($white, 0.65);
+$alert-yellow: #f0b849;
+$alert-red: #cc1818;
+$alert-green: #4ab866;
+
+// Deprecated vars
+$dark-theme-focus: $white;  // Focus color when the theme is dark.
+
+// Typography
+$default-font: -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,"Helvetica Neue", sans-serif; // Todo: deprecate in favor of $family variables
+$default-line-height: 1.4; // Todo: deprecate in favor of $line-height tokens
+
+// Font sizes
+$font-size-x-small: 11px;
+$font-size-small: 12px;
+$font-size-medium: 13px;
+$font-size-large: 15px;
+$font-size-x-large: 20px;
+$font-size-2x-large: 32px;
+
+// Font line heights
+$font-line-height-x-small: 16px;
+$font-line-height-small: 20px;
+$font-line-height-medium: 24px;
+$font-line-height-large: 28px;
+$font-line-height-x-large: 32px;
+$font-line-height-2x-large: 40px;
+
+// Font weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+
+// Font families
+$font-family-headings: -apple-system, "system-ui", "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font-family-body: -apple-system, "system-ui", "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font-family-mono: Menlo, Consolas, monaco, monospace;
+
+// Grid system
+$grid-unit: 8px;
+$grid-unit-05: 0.5 * $grid-unit;    // 4px
+$grid-unit-10: 1 * $grid-unit;      // 8px
+$grid-unit-15: 1.5 * $grid-unit;    // 12px
+$grid-unit-20: 2 * $grid-unit;      // 16px
+$grid-unit-30: 3 * $grid-unit;      // 24px
+$grid-unit-40: 4 * $grid-unit;      // 32px
+$grid-unit-50: 5 * $grid-unit;      // 40px
+$grid-unit-60: 6 * $grid-unit;      // 48px
+$grid-unit-70: 7 * $grid-unit;      // 56px
+$grid-unit-80: 8 * $grid-unit;      // 64px
+
+// Radius scale
+$radius-x-small: 1px;   // Applied to elements like buttons nested within primitives like inputs.
+$radius-small: 2px;     // Applied to most primitives.
+$radius-medium: 4px;    // Applied to containers with smaller padding.
+$radius-large: 8px;     // Applied to containers with larger padding.
+$radius-full: 9999px;   // For pills.
+$radius-round: 50%;     // For circles and ovals.
+
+// Elevation scale
+$elevation-x-small: 0 1px 1px rgba(#000000, 0.03), 0 1px 2px rgba(#000000, 0.02), 0 3px 3px rgba(#000000, 0.02), 0 4px 4px rgba(#000000, 0.01);
+$elevation-small: 0 1px 2px rgba(#000000, 0.05), 0 2px 3px rgba(#000000, 0.04), 0 6px 6px rgba(#000000, 0.03), 0 8px 8px rgba(#000000, 0.02);
+$elevation-medium: 0 2px 3px rgba(#000000, 0.05), 0 4px 5px rgba(#000000, 0.04), 0 12px 12px rgba(#000000, 0.03), 0 16px 16px rgba(#000000, 0.02);
+$elevation-large: 0 5px 15px rgba(#000000, 0.08), 0 15px 27px rgba(#000000, 0.07), 0 30px 36px rgba(#000000, 0.04), 0 50px 43px rgba(#000000, 0.02);
+
+// Dimensions
+$icon-size: 24px;
+$button-size: 36px;
+$button-size-next-default-40px: 40px; // transitionary variable for next default button size
+$button-size-small: 24px;
+$button-size-compact: 32px;
+$header-height: 60px;
+$panel-header-height: $grid-unit-60;
+$nav-sidebar-width: 300px;
+$admin-bar-height: 32px;
+$admin-bar-height-big: 46px;
+$admin-sidebar-width: 160px;
+$admin-sidebar-width-big: 190px;
+$admin-sidebar-width-collapsed: 36px;
+$modal-min-width: 350px;
+$modal-width-small: 384px;
+$modal-width-medium: 512px;
+$modal-width-large: 840px;
+$spinner-size: 16px;
+$canvas-padding: $grid-unit-20;
+
+// Mobile specific styles
+$mobile-text-min-font-size: 16px;
+
+// Editor styles
+$sidebar-width: 280px;
+$content-width: 840px;
+$wide-content-width: 1100px;
+$widget-area-width: 700px;
+$secondary-sidebar-width: 350px;
+$editor-font-size: 16px;
+$default-block-margin: 28px; // This value provides a consistent, contiguous spacing between blocks.
+$text-editor-font-size: 15px;
+$editor-line-height: 1.8;
+$editor-html-font: $font-family-mono;
+
+// Block & Editor UI
+$block-toolbar-height: $grid-unit-60;
+$border-width: 1px;
+$border-width-focus-fallback: 2px; // This exists as a fallback, ideally overridden by var(--wp-admin-border-width-focus) unless in some SASS math cases.
+$border-width-tab: 1.5px;
+$helptext-font-size: 12px;
+$radio-input-size: 16px;
+$radio-input-size-sm: 24px; // Width & height for small viewports.
+$block-padding: 14px; // Used to define space between block footprint and surrounding borders.
+$radius-block-ui: $radius-small;
+$shadow-popover: $elevation-x-small;
+$shadow-modal: $elevation-large;
+$default-font-size: $font-size-medium;
+
+// Block paddings
+$block-bg-padding--v: 1.25em;
+$block-bg-padding--h: 2.375em;
+
+// React Native specific
+$mobile-header-toolbar-height: 44px;
+$mobile-header-toolbar-expanded-height: 52px;
+$mobile-floating-toolbar-height: 44px;
+$mobile-floating-toolbar-margin: 8px;
+$mobile-color-swatch: 48px;
+$mobile-block-toolbar-height: 44px;
+$dimmed-opacity: 1;
+$block-edge-to-content: 16px;
+$solid-border-space: 12px;
+$dashed-border-space: 6px;
+$block-selected-margin: 3px;
+$block-selected-border-width: 1px;
+$block-selected-padding: 0;
+$block-selected-child-margin: 5px;
+$block-selected-to-content: $block-edge-to-content - $block-selected-margin - $block-selected-border-width;

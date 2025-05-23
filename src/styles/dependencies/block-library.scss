@@ -1,0 +1,180 @@
+// Block Library Styles
+@use "../../../node_modules/@wordpress/block-library/src/archives/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/avatar/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/audio/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/button/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/buttons/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/calendar/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/categories/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/code/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/columns/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/comments/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/comments-pagination/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/comment-template/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/comment-date/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/comment-content/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/comment-author-name/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/comment-edit-link/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/comment-reply-link/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/cover/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/details/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/embed/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/file/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/form-input/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/gallery/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/group/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/heading/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/image/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/latest-comments/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/latest-posts/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/list/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/loginout/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/media-text/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/navigation/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/navigation-link/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/page-list/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/paragraph/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-author/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-author-biography/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-comments-form/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-comments-count/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-content/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-comments-link/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-date/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-excerpt/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-featured-image/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-navigation-link/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-terms/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-time-to-read/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-title/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-author-name/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/preformatted/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/pullquote/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-template/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/query-pagination/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/query-title/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/query-total/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/quote/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/read-more/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/rss/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/search/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/separator/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/site-logo/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/site-tagline/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/site-title/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/social-links/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/spacer/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/tag-cloud/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/table/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/table-of-contents/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/term-description/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/text-columns/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/verse/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/video/style.scss";
+@use "../../../node_modules/@wordpress/block-library/src/footnotes/style.scss";
+
+@use "common.scss";
+
+// Block Library Theme
+@use "../../../node_modules/@wordpress/block-library/src/audio/theme.scss";
+@use "../../../node_modules/@wordpress/block-library/src/code/theme.scss";
+@use "../../../node_modules/@wordpress/block-library/src/embed/theme.scss";
+@use "../../../node_modules/@wordpress/block-library/src/gallery/theme.scss";
+@use "../../../node_modules/@wordpress/block-library/src/image/theme.scss";
+@use "../../../node_modules/@wordpress/block-library/src/pullquote/theme.scss";
+@use "../../../node_modules/@wordpress/block-library/src/quote/theme.scss";
+@use "../../../node_modules/@wordpress/block-library/src/search/theme.scss";
+@use "../../../node_modules/@wordpress/block-library/src/group/theme.scss";
+@use "../../../node_modules/@wordpress/block-library/src/separator/theme.scss";
+@use "../../../node_modules/@wordpress/block-library/src/table/theme.scss";
+@use "../../../node_modules/@wordpress/block-library/src/video/theme.scss";
+@use "../../../node_modules/@wordpress/block-library/src/template-part/theme.scss";
+
+// Block Library Editor
+@use "../../../node_modules/@wordpress/block-library/src/archives/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/audio/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/avatar/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/button/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/buttons/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/categories/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/code/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/columns/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/comments/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/comment-author-avatar/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/comments-pagination/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/comments-pagination-numbers/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/comments-title/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/cover/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/details/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/embed/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/file/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/form-input/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/form-submission-notification/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/freeform/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/gallery/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/group/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/html/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/image/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/latest-posts/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/media-text/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/more/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/navigation/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/navigation-link/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/navigation-submenu/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/nextpage/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/page-list/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/paragraph/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-author/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-excerpt/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/pullquote/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/rss/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/search/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/separator/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/shortcode/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/site-logo/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/site-tagline/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/site-title/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/social-link/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/social-links/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/spacer/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/table/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/tag-cloud/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/template-part/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/text-columns/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/video/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/query/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/query-pagination/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/query-pagination-numbers/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-featured-image/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/post-comments-form/editor.scss";
+@use "../../../node_modules/@wordpress/block-library/src/editor-elements.scss";
+
+:root .editor-styles-wrapper {
+	@include background-colors-deprecated();
+	@include foreground-colors-deprecated();
+	@include gradient-colors-deprecated();
+}
+
+// Font sizes (not used now, kept because of backward compatibility).
+//
+// The reason we add the editor class wrapper here is
+// to avoid enqueuing the classes twice: here and in ./editor.scss
+:where(.editor-styles-wrapper) .has-regular-font-size {
+	font-size: 16px;
+}
+
+:where(.editor-styles-wrapper) .has-larger-font-size {
+	font-size: 42px;
+}
+
+/**
+ * Editor Normalization Styles
+ *
+ * These are only output in the editor, but styles here are NOT prefixed .editor-styles-wrapper.
+ * This allows us to create normalization styles that are easily overridden by editor styles.
+ */
+
+// Remove the browser default border for iframe in Custom HTML block, Embed block, etc.
+:where(.editor-styles-wrapper) iframe:not([frameborder]) {
+	border: 0;
+}
