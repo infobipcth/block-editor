@@ -18,11 +18,11 @@
     "dist/"
   ],
   "scripts": {
-    "clean": "rm -rf dist",
     "playground": "vite playground",
-    "dev": "vite",
-    "build": "vite build",
-    "prepare": "vite build"
+    "clean": "rm -rf dist",
+    "build": "npm run clean && npm run build:ts && npm run build:sass",
+    "build:ts": "tsc",
+    "build:sass": "vite build --config vite.sass.config.mjs"
   },
   "dependencies": {
     "@types/node": "^20",
