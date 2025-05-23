@@ -13,7 +13,10 @@
         "esModuleInterop": true,
         "allowJs": true,
         "jsx": "react",
-        "jsxFactory": "createElement"
+        "jsxFactory": "createElement",
+        "skipLibCheck": true,
+        "typeRoots": [ "./node_modules/@types", "../node_modules/@types", "../../node_modules/@types" ],
+        "types": ["node"]
     },
     "include": [
         "./src/**/*"
