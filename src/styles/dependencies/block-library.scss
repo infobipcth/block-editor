@@ -73,7 +73,7 @@
 @use "../../../node_modules/@wordpress/block-library/src/video/style.scss";
 @use "../../../node_modules/@wordpress/block-library/src/footnotes/style.scss";
 
-@use "common.scss";
+@use "../../../node_modules/@wordpress/block-library/src/common.scss";
 
 // Block Library Theme
 @use "../../../node_modules/@wordpress/block-library/src/audio/theme.scss";

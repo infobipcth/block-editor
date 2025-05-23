@@ -1,0 +1,80 @@
+:root {
+	@include admin-scheme($orange-900);
+
+    & {
+		--wp-block-synced-color: $synced-block-color;
+		--wp-block-synced-color--rgb: #{hex-to-rgb($synced-block-color)};
+		// This CSS variable is not used in Gutenberg project,
+		// but is maintained for backwards compatibility.
+		--wp-bound-block-color: var(--wp-block-synced-color);
+	}
+}
+
+.block-editor-container {
+    position: relative;
+    border: solid 1px $gray-300;
+    border-radius: 2px;
+
+    input, textarea {
+        box-sizing: border-box;
+    }
+
+    .block-editor {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .block-editor__header {
+        grid-area: header;
+        display: flex;
+        justify-content: space-between;
+        padding: .5rem;
+        border-bottom: solid 1px $gray-300;
+    }
+
+    .block-editor__header-toolbar {
+        display: flex;
+    }
+
+    .block-editor__content {
+        display: flex;
+    }
+
+    .block-editor__editor {
+        flex: 1;
+        padding: 1rem;
+        overflow-y: auto;
+    }
+
+    .block-editor__sidebar {
+        flex: 0 0 $sidebar-width;
+        overflow-y: auto;
+        border-left: 1px solid $gray-300;
+
+        .components-panel {
+            box-sizing: content-box;
+            height: 100%;
+            position: relative;
+            border: none;
+        }
+    }
+
+    .block-editor-inserter__menu {
+        background-color: $white;
+    }
+
+    .block-editor-inserter__popover {
+        .components-popover__content  {
+            background-color: $white;
+            max-height: 400px !important;
+        }
+
+        .block-editor-inserter__menu {
+            margin: -12px -8px;
+        }
+    }
+
+    iframe, img {
+        border: none;
+    }
+}
