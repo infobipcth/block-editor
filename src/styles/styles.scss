@@ -1,32 +1,14 @@
 @use "sass:math";
-
 @use "./styles/global-variables";
-@use "./styles/animations";
-//@use "./styles/breakpoints";
-//@use "./styles/colors";
-@use "./styles/mixins";
-@use "./styles/custom-properties";
-//@use "./styles/variables";
-@use "./styles/z-index";
+@use "./styles/dependencies/dependencies";
 
-@use "./styles/dependencies/components.scss";
-@use "./styles/dependencies/block-editor.scss";
-@use "./styles/dependencies/block-library.scss";
-@use "./styles/dependencies/format-library.scss";
-
-$sidebar-width: 300px;
-$border-color: #e0e0e0;
-$test: 1;
-
-// Include the default WP Components color variables.
-// TODO: Remove this once all admin-scheme variables are accounted for in the wp-components fallback values.
 :root {
-	@include admin-scheme(#3858e9);
+	@include admin-scheme(global-variables.$orange-900);
 }
 
 .block-editor-container {
     position: relative;
-    border: solid 1px $border-color;
+    border: solid 1px global-variables.$gray-300;
     border-radius: 2px;
 
     input, textarea {
@@ -43,7 +25,7 @@ $test: 1;
         display: flex;
         justify-content: space-between;
         padding: .5rem;
-        border-bottom: solid 1px $border-color;
+        border-bottom: solid 1px global-variables.$gray-300;
     }
 
     .block-editor__header-toolbar {
@@ -61,9 +43,9 @@ $test: 1;
     }
 
     .block-editor__sidebar {
-        flex: 0 0 $sidebar-width;
+        flex: 0 0 global-variables.$sidebar-width;
         overflow-y: auto;
-        border-left: 1px solid $border-color;
+        border-left: 1px solid global-variables.$gray-300;
 
         .components-panel {
             box-sizing: content-box;
@@ -74,12 +56,12 @@ $test: 1;
     }
 
     .block-editor-inserter__menu {
-        background-color: #FFFFFF;
+        background-color: global-variables.$white;
     }
 
     .block-editor-inserter__popover {
         .components-popover__content  {
-            background-color: #FFFFFF;
+            background-color: global-variables.$white;
             max-height: 400px !important;
         }
 
