@@ -18,11 +18,14 @@
     "dist/"
   ],
   "scripts": {
-    "playground": "vite playground",
     "clean": "rm -rf dist",
-    "build": "npm run clean && npm run build:ts && npm run build:sass",
-    "build:ts": "tsc",
-    "build:sass": "vite build --config vite.sass.config.mjs"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm run build:ts -- --watch & npm run build:sass -- --watch",
+    "start": "vite playground",
+    "prebuild": "npm run clean",
+    "build": "npm run build:ts && npm run build:sass",
+    "build:sass": "sass src/styles.scss dist/styles.css",
+    "build:ts": "tsc"
   },
   "dependencies": {
     "@types/node": "^20",
