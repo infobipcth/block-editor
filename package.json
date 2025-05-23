@@ -19,14 +19,10 @@
   ],
   "scripts": {
     "clean": "rm -rf dist",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "npm run build:ts -- --watch & npm run build:sass -- --watch",
-    "start": "vite playground",
-    "prebuild": "npm run clean",
-    "build": "npm run build:ts && npm run build:sass",
-    "build:sass": "sass src/styles.scss dist/styles.css",
-    "build:ts": "tsc",
-    "prepare": "npm run build"
+    "playground": "vite playground",
+    "dev": "vite",
+    "build": "vite build",
+    "prepare": "vite build"
   },
   "dependencies": {
     "@types/node": "^20",
