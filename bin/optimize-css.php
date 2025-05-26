@@ -4,7 +4,7 @@
 $projectRoot = dirname(__DIR__);
 $stylesDir = "$projectRoot/src/styles";
 $dependencyDir = "$projectRoot/src/styles/dependencies";
-$outputFile = "$stylesDir/styles-out.scss";
+$outputFile = "$projectRoot/src/styles.scss";
 
 // Create _dependencies.scss file if it doesn't exist.
 file_put_contents($outputFile, '');
