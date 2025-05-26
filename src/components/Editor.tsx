@@ -1,4 +1,4 @@
-import { useState, useEffect, render, createElement, StrictMode, unmountComponentAtNode } from '@wordpress/element'
+import { useState, useEffect, createElement, StrictMode, createRoot } from '@wordpress/element'
 import apiFetch from '@wordpress/api-fetch'
 import { SlotFillProvider } from '@wordpress/components'
 import { parse, serialize } from '@wordpress/blocks'
@@ -108,8 +108,8 @@ const removeEditor = (element: HTMLInputElement | HTMLTextAreaElement) => {
 
     const container = element.parentNode?.querySelector('.block-editor-container')
     if (container) {
-        unmountComponentAtNode(container)
-        container.remove()
+        const root = createRoot(container!)
+        root.unmount()
     }
 }
 
@@ -123,14 +123,15 @@ const initializeEditor = (element: HTMLInputElement | HTMLTextAreaElement, setti
 
     doAction('blockEditor.beforeInit', container)
 
-    render(
+    const root = createRoot(container!)
+
+    root.render(
         <Editor
             settings={applyFilters('blockEditor.settings', {...defaultSettings, ...settings}) as EditorSettings}
             onChange={input.setValue}
             value={input.getValue() || undefined}
             input={input.element}
-        />,
-        container
+        />
     )
 
     doAction('blockEditor.afterInit', container)
