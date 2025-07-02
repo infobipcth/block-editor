@@ -19,10 +19,12 @@
   ],
   "scripts": {
     "clean": "rm -rf dist",
-    "playground": "vite playground",
-    "dev": "vite",
-    "build": "vite build",
-    "prepare": "vite build"
+    "watch": "bun run build:ts -- --watch & bun run build:sass -- --watch",
+    "start": "vite playground",
+    "prebuild": "bun run clean",
+    "build": "bun run build:ts && bun run build:sass",
+    "build:sass": "sass src/styles.scss dist/styles.css",
+    "build:ts": "tsc"
   },
   "dependencies": {
     "@wordpress/api-fetch": "^7.24.0",
