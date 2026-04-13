@@ -4,7 +4,7 @@
 # This scripts extracts the Gutenberg package versions from a Gutenberg release directory #
 ###########################################################################################
 
-GUTENBERG_DIR=$1
+GUTENBERG_DIR="./gutenberg"
 PACKAGES_DIR="$GUTENBERG_DIR/packages"
 PACKAGES=(
   "api-fetch"
@@ -21,26 +21,26 @@ PACKAGES=(
   "server-side-render"
 )
 
-if [[ ! -d $PACKAGES_DIR ]]; then
+if [[ ! -d "$PACKAGES_DIR" ]]; then
     echo 'Directory does not exist';
     exit 1
 fi
 
-cd $PACKAGES_DIR
+cd "$PACKAGES_DIR"
 
 MISSING_PACKAGES=()
-for PACKAGE in ${PACKAGES[@]}; do
+for PACKAGE in "${PACKAGES[@]}"; do
     FILE="$PACKAGE/package.json"
-    if [[ -f $FILE ]]; then
-        VERSION=$(cat $FILE | egrep -o '"version": (".*")' | egrep -o '\d+\.\d+\.\d+')
+    if [[ -f "$FILE" ]]; then
+        VERSION=$(grep -E -o '"version": (".*")' "$FILE" | grep -E -o '[0-9]+\.[0-9]+\.[0-9]+')
         PACKAGE_VERSION="\"@wordpress/$PACKAGE\": \"~$VERSION\","
-        echo $PACKAGE_VERSION
+        echo "$PACKAGE_VERSION"
     else
-        MISSING_PACKAGES+=($PACKAGE)
+        MISSING_PACKAGES+=("$PACKAGE")
     fi
 done
 
-for PACKAGE in ${MISSING_PACKAGES[@]}; do
+for PACKAGE in "${MISSING_PACKAGES[@]}"; do
     echo "Package '$PACKAGE' was not found."
 done
 
