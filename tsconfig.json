@@ -2,6 +2,7 @@
     "compilerOptions": {
         "lib": ["ESNext", "DOM", "DOM.Iterable"],
         "outDir": "dist",
+        "rootDir": "./src",
         "sourceMap": true,
         "declaration": true,
         "strict": true,
@@ -9,7 +10,7 @@
         "noImplicitAny": false,
         "module": "esnext",
         "target": "es2015",
-        "moduleResolution": "node",
+        "moduleResolution": "bundler",
         "esModuleInterop": true,
         "allowJs": true,
         "jsx": "react",
